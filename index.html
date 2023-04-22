@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/56ff8a14de.js" crossorigin="anonymous" defer></script>
+    <script src="js/modal.js" defer></script>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <title>Sign up form | The odin project</title>
+</head>
+
+<body>
+    <section class="modal">
+        <button class="modal__button">
+            <i class="fa-solid fa-x modal__close"></i>
+
+        </button>
+        <h2 class="modal__title">
+            Sign up form | The odin project
+        </h2>
+        <p class="modal__text">Hey! This is Ignacio 🫡</p>
+        <p class="modal__description">This is the "Sign up project" made by me. This is just a practice project, It does
+            not work!</p>
+    </section>
+
+
+    <header class="header">
+        <a href="https://www.theodinproject.com/" target="_blank">
+            <img src="assets/odin-lined.png" alt="Odin logo" class="header__logo" />
+        </a>
+        <button class="header__button">
+            <i class="fa-solid fa-bars header__menu "></i>
+        </button>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <h1 class="hero__title">The odin project</h1>
+            <h2 class="hero__subtitle">Sign up</h2>
+            <p class="hero__text">Let's go, you know you want!</p>
+            <p class="hero__description">The best way to learn coding.</p>
+            <a href="#form" class="hero__link">
+                <i class="fa-solid fa-arrow-down hero__icon"></i>
+            </a>
+
+
+        </section>
+
+        <section id="form">
+            <div class="form__info">
+                <h2 class="form__title">Sign up</h2>
+                <p class="form__text">Let's go, you know you want!</p>
+            </div>
+            <form class="form">
+                <div class="form__group">
+                    <input class="form__input" type="text" id="username" placeholder=" " required />
+                    <label class="form__label" for="username">Username</label>
+                </div>
+                <div class="form__group">
+                    <input class="form__input" type="email" id="email" placeholder=" " required />
+                    <label class="form__label" for="email">Email</label>
+                </div>
+                <div class="form__group">
+                    <input class="form__input" type="tel" id="phone" placeholder=" " required />
+                    <label class="form__label" for="phone">Phone</label>
+                </div>
+                <div class="form__group">
+                    <input class="form__input" type="password" id="password" placeholder=" " required />
+                    <label class="form__label" for="password">Password</label>
+                </div>
+                <div class="form__group">
+                    <input class="form__input" type="password" id="password" placeholder=" " required />
+                    <label class="form__label" for="password">Repeat password</label>
+                </div>
+                <div>
+                    <button class="form__button">Sign up <i class="fa-solid fa-right-to-bracket"></i></button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

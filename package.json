@@ -1,0 +1,22 @@
+{
+  "name": "sign-up-form",
+  "version": "1.0.0",
+  "description": "This is a project of The Odin project made by me.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ignaciofigueroadev/ODIN-sign-up-form.git"
+  },
+  "author": "Ignacio Figueroa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ignaciofigueroadev/ODIN-sign-up-form/issues"
+  },
+  "homepage": "https://github.com/ignaciofigueroadev/ODIN-sign-up-form#readme",
+  "dependencies": {
+    "sass": "^1.62.0"
+  }
+}

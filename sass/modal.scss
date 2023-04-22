@@ -1,0 +1,47 @@
+@import "variables";
+.modal {
+  background-color: $principal-color;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 22rem;
+  height: 70vh;
+  transform: translate(-50%, -50%);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 1.875rem;
+  border-radius: 0.5625rem;
+  box-shadow: 0px -10px 5px 200px rgba(0, 0, 0, 0.31);
+  -webkit-box-shadow: 0px -10px 5px 1200px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: 0px -10px 5px 200px rgba(0, 0, 0, 0.31);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  z-index: 10;
+
+  &__close {
+    position: absolute;
+    top: 1.9375rem;
+    left: 19rem;
+    font-size: 24px;
+    cursor: pointer;
+
+    &:hover {
+      color: #ff0000;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    line-height: 3.125rem;
+    font-weight: $weight-900;
+    color: $secondary-color;
+  }
+
+  &__text {
+    font-weight: $weight-600;
+  }
+}

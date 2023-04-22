@@ -1,0 +1,229 @@
+@import "variables";
+
+body {
+  background-color: $principal-color;
+  color: $white;
+  font-family: $montserrat-font;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5625rem;
+
+  &__logo {
+    width: 4.25rem;
+    height: 4.25rem;
+  }
+
+  &__menu {
+    font-size: 40px;
+    text-align: center;
+    color: $white;
+    cursor: pointer;
+  }
+}
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.875rem;
+
+  &__title {
+    font-weight: $weight-900;
+    font-size: 2.5rem;
+    color: $secondary-color;
+  }
+
+  &__subtitle,
+  &__text {
+    display: none;
+  }
+
+  &__description {
+    width: 22ch;
+    font-weight: $weight-400;
+    white-space: nowrap;
+    border-right: 0.1rem solid $white;
+    animation: typing 2s steps(22), blink 0.5s infinite step-end alternate;
+    overflow: hidden;
+  }
+
+  &__logo {
+    display: none;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  &__icon {
+    font-size: 2rem;
+    animation: floating infinite 1s;
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translateY(0.75rem);
+    }
+    50% {
+      transform: translateY(1.5rem);
+    }
+    100% {
+      transform: translateY(0.75rem);
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.125rem;
+  justify-content: center;
+  align-items: center;
+  gap: 6.25rem;
+
+  &__info {
+    text-align: center;
+    padding-bottom: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 70%;
+  }
+
+  &__input {
+    border-bottom: 1px solid white;
+    outline: none;
+    transform: translateY(20px);
+    animation: shake 0.14s 3;
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      translate: 0;
+    }
+
+    25% {
+      translate: 8px 0;
+    }
+
+    75% {
+      translate: -8px 0;
+    }
+  }
+
+  &__input:valid {
+    border-color: red;
+    animation: none;
+  }
+
+  &__label {
+    color: $secondary-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.2s ease;
+  }
+  &__input:focus + &__label,
+  &__input:not(:placeholder-shown) + &__label {
+    transform: translateY(-12px) scale(0.7);
+    transform-origin: left top;
+  }
+
+  &__button {
+    background-color: $secondary-color;
+    color: $principal-color;
+    padding: 1.25rem 3.125rem;
+    border-radius: 9px;
+    font-weight: $weight-900;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+    &:hover {
+      background-color: transparent;
+      border: 3px solid $secondary-color;
+      color: $white;
+    }
+  }
+}
+
+@media (width >= 1023px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header {
+    &__menu {
+      display: none;
+    }
+  }
+
+  .hero {
+    &__icon {
+      display: none;
+    }
+
+    &__logo {
+      width: 100px;
+      height: 100px;
+      display: block;
+      animation: floating infinite 2s;
+    }
+
+    @keyframes floating {
+      0% {
+        transform: translateY(0.75rem);
+      }
+      50% {
+        transform: translateY(1.5rem);
+      }
+      100% {
+        transform: translateY(0.75rem);
+      }
+    }
+    &__subtitle,
+    &__text {
+      display: block;
+    }
+
+    &__subtitle {
+      font-size: 1.875rem;
+      font-weight: $weight-600;
+      color: $secondary-color;
+    }
+  }
+
+  .form {
+    &__info {
+      display: none;
+    }
+  }
+}
